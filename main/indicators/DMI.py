@@ -16,8 +16,9 @@ class DMI:
     def __init__(self, data: pd.DataFrame):
         self.trend = {}
         date = data.index
-        dmi_plus = talib.PLUS_DM(data['high'], data['low'], 14)
-        dmi_minus = talib.MINUS_DM(data['high'], data['low'], 14)
+        dmi_plus = talib.PLUS_DI(data['HIGH'], data['LOW'], 14)
+        dmi_minus = talib.MINUS_DI(data['HIGH'], data['LOW'], 14)
+        dmi = talib.DX(data['HIGH'], 14)
         for index in date:
             if np.isnan(dmi_plus[index]) or np.isnan(dmi_minus[index]):
                 self.trend[index] = Trend.UNKNOWN
