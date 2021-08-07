@@ -4,6 +4,7 @@
 # Large and increasing difference between +ve and -ve also means price volatility
 # Narrowing difference could mean consolidation
 # https://www.investopedia.com/articles/technical/02/050602.asp
+# https://www.investopedia.com/terms/d/dmi.asp
 # https://www.investopedia.com/ask/answers/112814/what-directional-movement-index-dmi-formula-and-how-it-calculated.asp
 import numpy as np
 import pandas as pd
